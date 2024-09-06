@@ -19,6 +19,7 @@ require 'controleur/controleur.php';
 require 'controleur/controleurLivre.php';
 require 'controleur/controleurPage.php';
 require 'controleur/controleurUtilisateur.php';
+require 'controleur/controleurTest.php'; //Ajouté durant l'exercice.
 
 // ************************************************
 // Vous n'avez rien à modifier dans le try catch
@@ -107,6 +108,9 @@ function gererRequetesGet()
 		case '/deconnexion':
 			deconnecterUtilisateur();
 			break;
+		case '/test': //Ajouté pour gérer la requête GET
+			afficherFormulaireTest();
+			break;
 		default:
 			throw new Exception('404 : La page que vous recherchez n\'existe pas');
 	}
@@ -123,6 +127,9 @@ function gererRequetesPost()
 			break;
 		case '/livres':
 			ajouterLivre();
+			break;
+		case '/test': //Ajouté pour gérer la requête POST
+			ajouterTest();
 			break;
 		default:
 			throw new Exception('404 : Impossible d\'ajouter ce type de ressource');

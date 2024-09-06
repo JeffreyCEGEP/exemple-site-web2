@@ -12,7 +12,7 @@
 
 <form class="m-auto needs-validation" style="max-width: 32rem;" novalidate method="post" action="index.php?ressource=/connexion&methode=POST">
   <div class="form-floating mb-2">
-    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required> <!--Name = Nom du paramètre que le serveur reçoit-->
     <label for="email">Email</label>
     <div class="invalid-feedback">
       Veuillez entrer votre adresse courriel.
